@@ -1,0 +1,61 @@
+# Source: php-test-quickstart/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php-test-quickstart-php-test-quickstart
+  labels:
+    draft: draft-app
+    chart: "php-test-quickstart-0.0.5"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'php-test-quickstart'
+    wave.pusher.com/update-on-config-change: 'true'
+  namespace: jx-production
+spec:
+  selector:
+    matchLabels:
+      app: php-test-quickstart-php-test-quickstart
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        draft: draft-app
+        app: php-test-quickstart-php-test-quickstart
+    spec:
+      serviceAccountName: php-test-quickstart-php-test-quickstart
+      containers:
+        - name: php-test-quickstart
+          image: "10.97.25.136/klau2005/php-test-quickstart:0.0.5"
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: VERSION
+              value: 0.0.5
+          envFrom: null
+          ports:
+            - name: http
+              containerPort: 80
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          resources:
+            limits:
+              cpu: 400m
+              memory: 256Mi
+            requests:
+              cpu: 200m
+              memory: 128Mi
+      terminationGracePeriodSeconds:
+      imagePullSecrets:
+        - name: "tekton-container-registry-auth"

@@ -1,0 +1,20 @@
+# Source: php-test-quickstart/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: php-test-quickstart
+  labels:
+    chart: "php-test-quickstart-0.0.1"
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  annotations:
+    meta.helm.sh/release-name: 'php-test-quickstart'
+  namespace: jx-production
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+  selector:
+    app: php-test-quickstart-php-test-quickstart

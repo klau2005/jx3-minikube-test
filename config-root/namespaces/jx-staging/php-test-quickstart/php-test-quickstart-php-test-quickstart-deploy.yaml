@@ -5,7 +5,7 @@ metadata:
   name: php-test-quickstart-php-test-quickstart
   labels:
     draft: draft-app
-    chart: "php-test-quickstart-0.0.2"
+    chart: "php-test-quickstart-0.0.4"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'php-test-quickstart'
@@ -25,11 +25,11 @@ spec:
       serviceAccountName: php-test-quickstart-php-test-quickstart
       containers:
         - name: php-test-quickstart
-          image: "10.97.25.136/klau2005/php-test-quickstart:0.0.2"
+          image: "10.97.25.136/klau2005/php-test-quickstart:0.0.4"
           imagePullPolicy: IfNotPresent
           env:
             - name: VERSION
-              value: 0.0.2
+              value: 0.0.4
           envFrom: null
           ports:
             - name: http

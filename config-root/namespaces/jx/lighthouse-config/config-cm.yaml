@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - klau2005/jx3-minikube-test
-      target_url: http://lighthouse-jx.192.168.39.52.nip.io/merge/status
+      target_url: http://lighthouse-jx.192.168.39.23.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null

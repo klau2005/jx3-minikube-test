@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: klau2005
+    provider: github
+    repository: php-test-quickstart
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: klau2005-php-test-quickstart
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/klau2005/php-test-quickstart.git
+  org: klau2005
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: php-test-quickstart
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/klau2005/php-test-quickstart

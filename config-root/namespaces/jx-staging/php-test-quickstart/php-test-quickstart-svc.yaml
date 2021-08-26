@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: php-test-quickstart
   labels:
-    chart: "php-test-quickstart-0.0.3"
+    chart: "php-test-quickstart-0.0.5"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'php-test-quickstart'

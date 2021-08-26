@@ -47,7 +47,7 @@
     <tr>
 	      <td><a href='https://hub.docker.com/_/registry/' title='DEPRECATED A Helm chart for Docker Registry'> <img src='https://hub.docker.com/public/images/logos/mini-logo.svg' width='24px' height='24px'> docker-registry </a></td>
 	      <td></td>
-	      <td><a href='http://docker-registry-jx.192.168.39.52.nip.io/'>view</a></td>
+	      <td><a href='http://docker-registry-jx.192.168.39.23.nip.io/'>view</a></td>
 	      <td><a href='https://hub.docker.com/_/registry/'>source</a></td>
 	    </tr>
     <tr>
@@ -64,6 +64,15 @@
 	      <td>0.27.2</td>
 	      <td></td>
 	      <td><a href='https://github.com/cdfoundation/tekton-helm-chart'>source</a></td>
+	    </tr>
+    <tr>
+		      <td colspan='4'><h3>jx-staging</h3></td>
+		    </tr>
+	    <tr>
+	      <td><a href='' title='A Helm chart for Kubernetes'> <img src='https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png' width='24px' height='24px'> php-test-quickstart </a></td>
+	      <td>0.0.6</td>
+	      <td></td>
+	      <td></td>
 	    </tr>
 
   </tbody>

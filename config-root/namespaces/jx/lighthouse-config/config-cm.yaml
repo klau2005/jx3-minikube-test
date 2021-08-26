@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         klau2005/jx3-minikube-test: true
+        klau2005/php-test-quickstart: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +21,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         klau2005/jx3-minikube-test: merge
+        klau2005/php-test-quickstart: merge
       queries:
       - labels:
         - approved
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - klau2005/jx3-minikube-test
+        - klau2005/php-test-quickstart
       - labels:
         - updatebot
         missingLabels:
@@ -41,7 +44,8 @@ data:
         - needs-rebase
         repos:
         - klau2005/jx3-minikube-test
-      target_url: http://lighthouse-jx.192.168.39.52.nip.io/merge/status
+        - klau2005/php-test-quickstart
+      target_url: http://lighthouse-jx.192.168.39.23.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null

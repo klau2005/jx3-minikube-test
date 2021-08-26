@@ -40,7 +40,7 @@ jxRequirements:
   ingress:
     domain: 192.168.39.23.nip.io
     kind: ingress
-    namespaceSubDomain: -jx.
+    namespaceSubDomain: -jx-staging.
     tls:
       email: ""
       enabled: false

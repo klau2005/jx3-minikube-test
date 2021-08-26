@@ -1,12 +1,12 @@
-# Source: jxboot-helmfile-resources/templates/700-bucketrepo-ing.yaml
+# Source: php-test-quickstart/templates/ingress.yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
-    meta.helm.sh/release-name: 'jxboot-helmfile-resources'
-  name: bucketrepo
-  namespace: jx
+    meta.helm.sh/release-name: 'php-test-quickstart'
+  name: php-test-quickstart
+  namespace: jx-staging
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 spec:
@@ -16,7 +16,7 @@ spec:
           - pathType: ImplementationSpecific
             backend:
               service:
-                name: bucketrepo
+                name: php-test-quickstart
                 port:
                   number: 80
-      host: bucketrepo-jx.192.168.39.23.nip.io
+      host: php-test-quickstart-jx-staging.192.168.39.23.nip.io

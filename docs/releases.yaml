@@ -115,13 +115,13 @@
   path: helmfiles/jx-staging/helmfile.yaml
   releases:
   - apiVersion: v1
-    appVersion: 0.0.1
+    appVersion: 0.0.2
     description: A Helm chart for Kubernetes
-    firstDeployed: "2021-08-26T09:13:03Z"
+    firstDeployed: "2021-08-26T11:23:57Z"
     icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
-    lastDeployed: "2021-08-26T09:13:03Z"
+    lastDeployed: "2021-08-26T11:23:57Z"
     name: php-test-quickstart
     repositoryName: dev
     repositoryUrl: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts/
     resourcePath: config-root/namespaces/jx-staging/php-test-quickstart
-    version: 0.0.1
+    version: 0.0.2

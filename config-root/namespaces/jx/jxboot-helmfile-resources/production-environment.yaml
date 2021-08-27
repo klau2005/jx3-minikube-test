@@ -14,5 +14,5 @@ spec:
   kind: Permanent
   label: Production
   order: 500
-  promotionStrategy: "Auto"
+  promotionStrategy: "Manual"
   namespace: "jx-production"

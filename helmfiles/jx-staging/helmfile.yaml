@@ -9,7 +9,7 @@ repositories:
   url: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts/
 releases:
 - chart: dev/php-test-quickstart
-  version: 0.0.6
+  version: 0.0.8
   name: php-test-quickstart
   values:
   - jx-values.yaml

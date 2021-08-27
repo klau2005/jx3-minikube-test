@@ -3,7 +3,7 @@ environments:
   default:
     values:
     - jx-values.yaml
-namespace: jx-staging
+namespace: jx-production
 repositories:
 - name: dev
   url: http://bucketrepo.jx.svc.cluster.local/bucketrepo/charts/

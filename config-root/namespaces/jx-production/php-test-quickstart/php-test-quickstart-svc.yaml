@@ -8,7 +8,7 @@ metadata:
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'php-test-quickstart'
-  namespace: jx-staging
+  namespace: jx-production
 spec:
   type: ClusterIP
   ports:
